@@ -1,10 +1,34 @@
-@import "./base/base";
-
-@import "./components/buttons";
-
-@import "./layout/header";
-
 @import "./utils/variables";
 @import "./utils/mixins";
-@import "./utils/functions";
-@import "./utils/extensions";
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-thirdly: #99E2D0;
+
+$breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+
+@mixin media-breakpoint-up($size) {
+    @media (min-width: map_get($breakpoints, $size)) {
+      @content;
+    }
+}
+
+body{
+    padding: 0px;
+    margin: 0;
+    @include media-breakpoint-up(md) {
+        margin: 10px;
+    }
+}
+
+html {
+    margin: auto;
+    padding: 0;
+}
+
+

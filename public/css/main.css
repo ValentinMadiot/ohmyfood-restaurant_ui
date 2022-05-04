@@ -1,0 +1,16 @@
+/** vous rangez vos variables, fonctions, mixins et les  %placeholders 
+pour les extensions (si vous en utilisez) **/
+body {
+  padding: 0px;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  body {
+    margin: 10px;
+  }
+}
+
+html {
+  margin: auto;
+  padding: 0;
+}/*# sourceMappingURL=main.css.map */
