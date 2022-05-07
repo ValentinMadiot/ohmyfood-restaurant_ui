@@ -1,34 +1,29 @@
 @import "./utils/variables";
 @import "./utils/mixins";
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-thirdly: #99E2D0;
-
-$breakpoints: (
-    sm: 576px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px
-);
-
-@mixin media-breakpoint-up($size) {
-    @media (min-width: map_get($breakpoints, $size)) {
-      @content;
-    }
+*,
+::before,
+::after {
+    box-sizing: border-box;
 }
 
 body{
-    padding: 0px;
-    margin: 0;
-    @include media-breakpoint-up(md) {
-        margin: 10px;
-    }
+    margin: 0px;
 }
 
 html {
-    margin: auto;
-    padding: 0;
+}
+
+header {
+    box-shadow: 0 0 .5rem rgba(0,0,0,.25);
+    padding: 1rem;
+    h1 {
+    font-family: 'Shrikhand', cursive;
+    text-align: center;
+    margin: 0;
+    }  
 }
 
 
