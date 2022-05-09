@@ -1,23 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 /** vous rangez vos variables, fonctions, mixins et les  %placeholders 
 pour les extensions (si vous en utilisez) **/
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
-*,
-::before,
-::after {
+*, ::before, ::after {
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
-  margin: 0px;
+  font-size: 1.4rem;
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+body, h1, h2, p {
+  margin: 0;
+}
+
+body {
+  min-width: 320px;
 }
 
 header {
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
-  padding: 1rem;
+  padding: 2.3rem;
+  position: relative;
 }
 header h1 {
   font-family: "Shrikhand", cursive;
   text-align: center;
-  margin: 0;
-}/*# sourceMappingURL=main.css.map */
+}
+
+.location {
+  background-color: #f3f3f3;
+  color: #404040;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+.location i {
+  font-size: 1.7rem;
+}
+.location h2 {
+  font-size: 1.7rem;
+}
+
+.intro {
+  text-align: center;
+  padding: 3rem 2rem 6rem 2rem;
+  background-color: #fafafa;
+}
+.intro p {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #404040;
+  padding: 1.5rem 2rem 3rem 2rem;
+}
+.intro button {
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: white;
+  padding: 1.3rem 2.5rem;
+  border-radius: 3rem;
+  border: none;
+  background-image: linear-gradient(to left top, #9356DC, #FF79DA);
+  box-shadow: 0rem 0.4rem 1rem rgba(0, 0, 0, 0.25);
+}
+.intro button:hover {
+  transform: scale(1.03);
+  transition-duration: 0.75s;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=main.css.map */
