@@ -97,12 +97,10 @@ header {
         background-image: linear-gradient(to left top,$color-primary,$color-secondary);
         box-shadow: 0rem .4rem 1rem rgba(0,0,0,.25);
         &:hover {
+            opacity: 0.9;
             transform: scale(1.03);
             transition-duration: .75s;
             cursor: pointer;
         }
     }
 }
-
-
-
