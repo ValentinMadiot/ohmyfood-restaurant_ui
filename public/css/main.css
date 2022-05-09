@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
-/** vous rangez vos variables, fonctions, mixins et les  %placeholders 
-pour les extensions (si vous en utilisez) **/
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -32,6 +30,8 @@ body {
   min-width: 320px;
 }
 
+/** vous rangez vos variables, fonctions, mixins et les  %placeholders 
+pour les extensions (si vous en utilisez) **/
 header {
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
   padding: 2.3rem;
@@ -84,6 +84,56 @@ header h1 {
   transform: scale(1.03);
   transition-duration: 0.75s;
   cursor: pointer;
+}
+
+.search {
+  padding: 5rem 2rem;
+  counter-reset: numbers;
+}
+.search ol {
+  list-style-type: none;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+@media (min-width: 1000px) {
+  .search ol {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.search ol li {
+  position: relative;
+  font-weight: 500;
+  font-size: 1.7rem;
+  background-color: #f6f6f6;
+  padding: 2.5rem 1rem;
+  border-radius: 2rem;
+  box-shadow: 0rem 0.4rem 1rem rgba(0, 0, 0, 0.25);
+}
+.search ol li::before {
+  content: counter(numbers);
+  counter-increment: numbers;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 30px;
+  height: 2.2rem;
+  width: 2.2rem;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  bottom: 2.3rem;
+  left: -1.2rem;
+  font-weight: 500;
+  font-size: small;
+}
+.search ol li:hover {
+  transform: scale(1.03);
+  background-color: #f4ecfd;
+}
+.search ol li i {
+  margin: 0 2rem 0 2rem;
+  color: gray;
+  font-size: large;
 }
 
 /*# sourceMappingURL=main.css.map */

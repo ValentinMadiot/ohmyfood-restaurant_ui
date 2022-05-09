@@ -1,0 +1,16 @@
+// Section Location
+.location {
+    background-color: #f3f3f3; 
+    color: darken($color: grey, $amount: 25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    i {
+        font-size: 1.7rem;
+    }
+    h2 {
+        font-size: 1.7rem;
+    }
+}

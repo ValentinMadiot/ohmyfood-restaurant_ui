@@ -1,0 +1,28 @@
+// Section Intro
+.intro {
+    text-align: center;
+    padding: 3rem 2rem 6rem 2rem;
+    background-color: #fafafa;
+    p {
+        font-size: 1.6rem;
+        font-weight: 300;
+        color: darken($color: grey, $amount: 25);
+        padding: 1.5rem 2rem 3rem 2rem;
+    }
+    button {
+        font-size: 1.7rem;
+        font-weight: 500;
+        color: white;
+        padding: 1.3rem 2.5rem;
+        border-radius: 3rem;
+        border: none;
+        background-image: linear-gradient(to left top,$color-primary,$color-secondary);
+        @include shadow-buttons;
+            &:hover {
+            opacity: 0.9;
+            transform: scale(1.03);
+            transition-duration: .75s;
+            cursor: pointer;
+        }
+    }
+}
