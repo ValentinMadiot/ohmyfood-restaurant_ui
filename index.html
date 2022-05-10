@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+
+    <!-- HEAD -->
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,22 +11,32 @@
         <link rel="stylesheet" href="./public/css/main.css">
         <title>Ohmyfood</title>
     </head>
+
+    <!-- BODY -->
     <body>
+
+        <!-- HEADER -->
         <header>
             <h1>Ohmyfood</h1>
         </header>
+
+        <!-- MAIN -->
         <main>
-            <section class="location">
+
+            <!-- PLACE -->
+            <section class="place">
                 <i class="fa-solid fa-location-dot"></i>
                 <h2>Paris, Belleville</h2>
             </section>
 
+            <!-- INTRO -->
             <section class="intro">
                 <h2>Réservez le menu qui <br> vous convient</h2>
                 <p>Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
-                <button>Explorer nos restaurants</button>
+                <a href="#restaurants"><button >Explorer nos restaurants</button></a>
             </section>
 
+            <!-- SEARCH -->
             <section class="search">
                 <h2>Fonctionnement</h2>
                 <ol>
@@ -34,8 +46,60 @@
                 </ol>
             </section>
 
+            <!-- CARDS -->
+            <section id="restaurants" class="restaurants">
+                <h2 >Restaurants</h2>
 
+                <ul class="restaurants__list">
+                    <li>
+                        <a href="./html/01gout.html">
+                            <article class="restaurants__card restaurants__card--new">
+                                <img src="./public/img/restaurants/gout.jpg" alt="Image menu La palette du goût">
+                                <footer>
+                                    <h3>La palette du goût</h3>
+                                    <p>Ménilmontant</p>
+                                </footer>
+                            </article>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./html/02enchantee.html">
+                            <article class="restaurants__card restaurants__card--new">
+                                <img src="./public/img/restaurants/enchantee.jpg" alt="Image menu La note enchantée">
+                                <footer>
+                                    <h3>La note enchantée</h3>
+                                    <p>Charonne</p>
+                                </footer>
+                            </article>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./html/03francaise.html">
+                            <article class="restaurants__card">
+                                <img src="./public/img/restaurants/francaise.jpg" alt="Image menu À la française">
+                                <footer>
+                                    <h3>À la française</h3>
+                                    <p>Cité Rouge</p>
+                                </footer>
+                            </article>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./html/04sens.html">
+                            <article class="restaurants__card">
+                                <img src="./public/img/restaurants/sens.jpg" alt="Image menu Le délice des sens">
+                                <footer>
+                                    <h3>Le délice des sens</h3>
+                                    <p>Folie-Méricourt</p>
+                                </footer>
+                            </article>
+                        </a>
+                    </li>
+                </ul>
+            </section>
         </main>
+
+        <!-- FOOTER -->
         <footer>
 
         </footer>

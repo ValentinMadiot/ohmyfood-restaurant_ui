@@ -33,13 +33,23 @@ body {
 h2 {
     font-size: 2.5rem;
 }
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul, ol {
+    list-style: none;
+}
 
 //! MARGINE
-body, h1, h2, p{
+// Margin none
+body, h1, h2, h3, p, ol, ul{
     margin: 0;
+    padding: 0;
 }
 
 //! WIDTH
+// Width body
 body {
     min-width: 320px;
 }

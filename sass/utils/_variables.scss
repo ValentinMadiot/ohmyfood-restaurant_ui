@@ -1,10 +1,12 @@
-/** vous rangez vos variables, fonctions, mixins et les  %placeholders 
-pour les extensions (si vous en utilisez) **/
-
+//! VARIABLES
+// Colors
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-thirdly: #99E2D0;
+$color-gray1: #ebebeb; //#f3f3f3
+$color-gray2: #f3f3f3; //#fafafa
 
+// Breakpoints
 $breakpoints: (
     sm: 576px,
     md: 768px,

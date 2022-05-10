@@ -1,18 +1,26 @@
+//! SEARCH
 .search {
     padding: 5rem 2rem;
     counter-reset: numbers;
+    h2 {
+        padding-left: 2rem;
+    }  
     ol {
+        padding: 3rem 0 1rem 1rem;
         list-style-type: none;
         display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-gap: 2rem;
-        @media (min-width:1000px) {
+        grid-gap: 2.3rem;
+        @media (min-width:900px) {
             grid-template-columns: 1fr 1fr 1fr;
         } 
         li {
             position: relative;
             font-weight: 500;
             font-size: 1.7rem;
+            background-color: $color-gray2;
+            padding: 2.5rem 1rem;
+            border-radius: 2rem;
+            @include button-shadow;
             &::before{
                 content: counter(numbers);
                 counter-increment: numbers;
@@ -24,18 +32,16 @@
                 display: grid;
                 place-items: center;
                 position: absolute;
-                bottom: 2.3rem;
+                bottom: 2.4rem;
                 left: -1.2rem;
                 font-weight: 500;
                 font-size: small;
             }        
-            background-color: #f6f6f6;
-            padding: 2.5rem 1rem;
-            border-radius: 2rem;
-            @include shadow-buttons;
             &:hover {
-                transform: scale(1.03);
                 background-color: #f4ecfd;
+                i {
+                    color: $color-primary;
+                }
             }
             i {
                 margin: 0 2rem 0 2rem;

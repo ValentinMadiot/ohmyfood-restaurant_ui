@@ -1,7 +1,6 @@
-// Section Location
-.location {
-    background-color: #f3f3f3; 
-    color: darken($color: grey, $amount: 25);
+//! PLACE
+.place {
+    background-color: $color-gray1; 
     display: flex;
     justify-content: center;
     align-items: center;
