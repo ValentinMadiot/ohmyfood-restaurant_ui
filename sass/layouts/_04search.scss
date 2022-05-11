@@ -38,7 +38,8 @@
                 font-size: small;
             }        
             &:hover {
-                background-color: #f4ecfd;
+                background-color: lighten($color: $color-primary, $amount: 35);
+
                 i {
                     color: $color-primary;
                 }

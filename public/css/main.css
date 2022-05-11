@@ -138,7 +138,7 @@ header h1 {
   font-size: small;
 }
 .search ol li:hover {
-  background-color: #f4ecfd;
+  background-color: #f2eafb;
 }
 .search ol li:hover i {
   color: #9356DC;
@@ -213,6 +213,35 @@ header h1 {
   right: 3rem;
   top: 2rem;
   font-size: 2.5rem;
+}
+
+.footer {
+  background-color: #353535;
+  padding: 2.5rem 3rem;
+  color: white;
+  font-weight: 500;
+}
+.footer h2 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 500;
+  font-size: 2rem;
+  padding: 0 1rem;
+}
+.footer h2:hover {
+  color: #ae80e5;
+}
+.footer ul {
+  padding: 1rem 0 0 0;
+}
+.footer ul li {
+  padding: 0.5rem 0;
+}
+.footer ul li:hover {
+  color: #ae80e5;
+}
+.footer ul li i {
+  width: 2rem;
+  font-size: 1.7 rem;
 }
 
 /*# sourceMappingURL=main.css.map */
