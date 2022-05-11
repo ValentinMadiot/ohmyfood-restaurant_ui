@@ -43,13 +43,18 @@ ul, ol {
 
 //! MARGINE
 // Margin none
-body, h1, h2, h3, p, ol, ul{
+body, h1, h2, h3, h4, p, ol, ul{
     margin: 0;
     padding: 0;
 }
 
 //! WIDTH
-// Width body
 body {
     min-width: 320px;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
 }
+
+//! BACKGROUND
+
