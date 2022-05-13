@@ -3,19 +3,16 @@
     box-shadow: 0 0 .5rem rgba(0,0,0,.25);
     padding: 2.3rem;
     position: relative;
-    h1 {
+    &__title {
     font-family: 'Shrikhand', cursive;
     text-align: center;
     } 
     &--arrow {
         position: absolute;
-        height: 2rem;
         width: 2rem;
+        height: 2rem;
         top: 50%;
         transform: translateY(-50%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
         font-size: 2.3rem;
     } 
 }

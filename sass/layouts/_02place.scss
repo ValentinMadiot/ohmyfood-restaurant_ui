@@ -6,10 +6,11 @@
     align-items: center;
     gap: 1.5rem;
     padding: 2rem;
-    i {
-        font-size: 1.7rem;
+    color: darken($color: grey, $amount: 30);
+    &__ico {
+        font-size: 2rem;
     }
-    h2 {
-        font-size: 1.7rem;
+    &__city {
+        font-size: 2rem;
     }
 }

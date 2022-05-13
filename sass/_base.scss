@@ -51,10 +51,10 @@ body, h1, h2, h3, h4, p, ol, ul{
 //! WIDTH
 body {
     min-width: 320px;
-    width: 100%;
-    max-width: 1440px;
-    margin: auto;
 }
-
-//! BACKGROUND
-
+.container {
+    max-width: 1280px;
+    margin: auto;
+    position: relative;
+    //z-index: 1;
+}

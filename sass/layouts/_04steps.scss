@@ -1,0 +1,53 @@
+//! SEARCH
+.steps {
+    padding: 5rem 2rem;
+    counter-reset: numbers;
+    &__title {
+        padding-left: 2rem;
+    }  
+    &__list {
+        padding: 3rem 0 1rem 1rem;
+        list-style-type: none;
+        display: grid;
+        grid-gap: 2.3rem;
+        @include media-breakpoint-up (lg) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    &__element {
+        position: relative;
+        font-weight: 500;
+        font-size: 1.7rem;
+        background-color: $color-gray2;
+        padding: 2.5rem 1rem;
+        border-radius: 2rem;
+        @include button-shadow;
+        &::before {
+            position: absolute;
+            bottom: 2.4rem;
+            left: -1.2rem;
+            width: 2.2rem;
+            height: 2.2rem;
+            border-radius: 2rem;
+            font-weight: 500;
+            font-size: 1.4rem;
+            background-color: $color-primary;
+            color: white;
+            content: counter(numbers);
+            counter-increment: numbers;
+            display: grid;
+            place-items: center;
+        }        
+        &:hover {
+            background-color: lighten($color: $color-primary, $amount: 35);
+            .steps__ico {
+                color: $color-primary;
+            }
+        }
+    }
+    &__ico {
+        padding: 0 2rem 0 2rem;
+        color: darken($color: grey, $amount: 0);
+        font-size: large;
+    }
+}
