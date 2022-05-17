@@ -19,7 +19,8 @@
         border: none;
         @include button-shadow;
             &:hover {
-            @include button-effect;
+                transform: scale(1.10);
+                transition: .40s;
             background-image: linear-gradient(to right bottom, $color-primary,$color-secondary);
             color: white;
             cursor: pointer;

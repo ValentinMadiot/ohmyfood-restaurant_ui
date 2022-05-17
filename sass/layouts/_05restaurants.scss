@@ -8,7 +8,7 @@
     &__list {
         padding: 3rem 0;
         display: grid;
-        grid-gap: 2rem;
+        grid-gap: 3rem;
         @include media-breakpoint-up (lg) {
             grid-template-columns: repeat(2,1fr);            
         }
@@ -18,8 +18,8 @@
         border-radius: 1.5rem;
         @include button-shadow;
         &:hover {
-           transform: scale(1.03);
-           cursor: pointer;
+            transform: scale(1.03);
+            cursor: pointer;
         }
         &--new::before {
             position: absolute;
@@ -53,11 +53,20 @@
             padding-top: .5rem;
         }
         &__ico {
-            position: absolute;
-            right: 3rem;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 2.5rem;
+            &::before {
+                @include heart-restaurant;
+            }
+            &::after {
+                @include heart-restaurant;
+                @include heart-gradient;
+                opacity: 0;
+                font-weight: 900;
+            }
+            &:hover::after {
+                opacity: 1;
+                transition-duration: .35s;
+            }
+        
         }
     }
 

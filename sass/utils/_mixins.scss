@@ -1,14 +1,51 @@
 //! MIXINS
+//Breakpoint
 @mixin media-breakpoint-up($size) {
     @media (min-width: map_get($breakpoints, $size)) {
       @content;
     }
 }
+
+//Shadow
 @mixin button-shadow {
   box-shadow: 0rem .4rem 1rem rgba(0,0,0,.25);
 }
+@mixin menu-shadow {
+  box-shadow: .25rem .25rem 1rem rgba(0,0,0,.1);
+}
 
+//Effect
 @mixin button-effect {
   transform: scale(1.03);
   transition-duration: .50s;
+}
+
+//Icons
+@mixin heart-restaurant {
+  position: absolute;
+  right: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "\f004";
+  font: var(--fa-font-solid);
+  font-size: 2.5rem;
+  font-weight: 400;
+  opacity: 1;
+}
+
+@mixin heart-menu {
+  position: absolute;
+  right: 1rem;
+  content: "\f004";
+  font: var(--fa-font-solid);
+  font-weight: 400;
+  opacity: 1;
+}
+
+//Gradient
+@mixin heart-gradient {
+  background: linear-gradient(to left top,$color-primary,$color-secondary);
+  color: transparent;
+  background-clip: text; 
+  -webkit-background-clip: text; 
 }

@@ -102,8 +102,8 @@ body {
   box-shadow: 0rem 0.4rem 1rem rgba(0, 0, 0, 0.25);
 }
 .explore__button:hover {
-  transform: scale(1.03);
-  transition-duration: 0.5s;
+  transform: scale(1.1);
+  transition: 0.4s;
   background-image: linear-gradient(to right bottom, #9356DC, #FF79DA);
   color: white;
   cursor: pointer;
@@ -174,7 +174,7 @@ body {
 .restaurants__list {
   padding: 3rem 0;
   display: grid;
-  grid-gap: 2rem;
+  grid-gap: 3rem;
 }
 @media (min-width: 992px) {
   .restaurants__list {
@@ -221,12 +221,37 @@ body {
   font-size: 1.8rem;
   padding-top: 0.5rem;
 }
-.restaurants-card__ico {
+.restaurants-card__ico::before {
   position: absolute;
   right: 3rem;
   top: 50%;
   transform: translateY(-50%);
+  content: "\f004";
+  font: var(--fa-font-solid);
   font-size: 2.5rem;
+  font-weight: 400;
+  opacity: 1;
+}
+.restaurants-card__ico::after {
+  position: absolute;
+  right: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "\f004";
+  font: var(--fa-font-solid);
+  font-size: 2.5rem;
+  font-weight: 400;
+  opacity: 1;
+  background: linear-gradient(to left top, #9356DC, #FF79DA);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  font-weight: 900;
+}
+.restaurants-card__ico:hover::after {
+  opacity: 1;
+  transition-duration: 0.35s;
 }
 
 .footer {
@@ -284,28 +309,64 @@ body {
   padding: 2rem 0 4.5rem 1rem;
   position: relative;
 }
-.card-restaurant__heart {
+.card-restaurant__heart::before {
   position: absolute;
   right: 1rem;
-  font-size: 2.5rem;
+  content: "\f004";
+  font: var(--fa-font-solid);
+  font-weight: 400;
+  opacity: 1;
+}
+.card-restaurant__heart::after {
+  position: absolute;
+  right: 1rem;
+  content: "\f004";
+  font: var(--fa-font-solid);
+  font-weight: 400;
+  opacity: 1;
+  background: linear-gradient(to left top, #9356DC, #FF79DA);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  font-weight: 900;
+}
+.card-restaurant__heart:hover::after {
+  opacity: 1;
+  transition-duration: 0.35s;
 }
 .card-list {
   display: grid;
 }
 @media (min-width: 992px) {
   .card-list {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
   }
+}
+.card-plat {
+  overflow: hidden;
+  padding: 0 1rem;
 }
 .card-plat__title {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 1.8rem;
   padding-left: 1rem;
+  position: relative;
+}
+.card-plat__title::after {
+  position: absolute;
+  content: "";
+  background-color: #99e2d0;
+  width: 4.5rem;
+  height: 0.4rem;
+  left: 1rem;
+  bottom: -0.8rem;
 }
 .card-plat__menus {
   padding: 3rem 0;
+  max-width: 100%;
 }
 .card-menu {
   position: relative;
@@ -314,20 +375,23 @@ body {
   margin-bottom: 1.5rem;
   border-radius: 1.5rem;
   background-color: white;
-  box-shadow: 0rem 0.4rem 1rem rgba(0, 0, 0, 0.25);
-  white-space: nowrap;
+  position: relative;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 .card-menu__title {
   font-weight: 500;
   font-size: 1.8rem;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 .card-menu__describe {
   font-weight: 300;
   font-size: 1.6rem;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 .card-menu__price {
   position: absolute;
@@ -335,6 +399,9 @@ body {
   bottom: 1.5rem;
   font-weight: 500;
   font-size: 1.5rem;
+}
+.card-menu__check {
+  background-color: #99E2D0;
 }
 .card-buton {
   display: flex;

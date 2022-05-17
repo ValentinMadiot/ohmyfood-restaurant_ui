@@ -15,31 +15,52 @@
         padding: 2rem 0 4.5rem 1rem;
         position: relative;
         &__heart {
-            position: absolute;
-            right: 1rem;
-            font-size: 2.5rem;
+            &::before {
+                @include heart-menu;
+            }
+            &::after {
+                @include heart-menu;
+                @include heart-gradient;
+                opacity: 0;
+                font-weight: 900;
+            }
+            &:hover::after {
+                opacity: 1;
+                transition-duration: .35s;
+            }
         }
     }
     &-list {
         display: grid;
         @include media-breakpoint-up (lg) {
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-gap: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1rem;
         }
     }
-
     &-plat {
+        overflow: hidden;
+        padding: 0 1rem;
         &__title {
             text-transform: uppercase;
             font-weight: 400;
             font-size: 1.8rem;
             padding-left: 1rem;
+            position: relative;
+            &::after {
+                position: absolute;
+                content: "";
+                background-color: #99e2d0;
+                width: 4.5rem;
+                height: .4rem;
+                left: 1rem;
+                bottom: -0.8rem;
+            }
         }
         &__menus {
             padding: 3rem 0;
+            max-width: 100%;
         }
     }
-
     &-menu {
         position: relative;
         padding: 1.1rem 6rem 1.1rem 1.5rem;
@@ -47,19 +68,22 @@
         margin-bottom: 1.5rem;
         border-radius: 1.5rem;
         background-color: white;
-        @include button-shadow;
-        white-space: nowrap;
+        position: relative;
+        @include menu-shadow;
+        overflow: hidden;
         &__title {
             font-weight: 500;
             font-size: 1.8rem;
             text-overflow: ellipsis;
             overflow: hidden;
+            white-space: nowrap;
         }
         &__describe {
             font-weight: 300;
             font-size: 1.6rem;
             text-overflow: ellipsis;
             overflow: hidden;
+            white-space: nowrap;
         }
         &__price {
             position: absolute;
@@ -67,6 +91,9 @@
             bottom: 1.5rem;
             font-weight: 500;
             font-size: 1.5rem;
+        }
+        &__check {
+            background-color: $color-thirdly;
         }
     }
     &-buton {
