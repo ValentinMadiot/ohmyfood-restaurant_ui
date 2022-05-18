@@ -71,12 +71,18 @@
         position: relative;
         @include menu-shadow;
         overflow: hidden;
+        animation: menu 3s;
+        animation-timing-function: cubic-bezier(.5,2,.5,1);
+        animation-fill-mode: both;
+        .delay1 {
+            animation-delay: 10s;
+        }
         &__title {
-            font-weight: 500;
-            font-size: 1.8rem;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
+        font-weight: 500;
+        font-size: 1.8rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
         }
         &__describe {
             font-weight: 300;
