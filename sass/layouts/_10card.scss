@@ -27,6 +27,7 @@
             &:hover::after {
                 opacity: 1;
                 transition-duration: .35s;
+                cursor: pointer;
             }
         }
     }
@@ -121,5 +122,11 @@
                 background-image: linear-gradient(to right bottom, $color-primary,$color-secondary);
             }
         }
+    }
+    .heart {
+        display: none;
+    }
+    .heart:checked + label::after {
+        opacity: 1;
     }
 }

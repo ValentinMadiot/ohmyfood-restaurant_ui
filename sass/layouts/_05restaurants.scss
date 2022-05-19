@@ -51,23 +51,28 @@
             font-weight: 300;
             font-size: 1.8rem;
             padding-top: .5rem;
-        }
-        &__ico {
-            &::before {
-                @include heart-restaurant;
-            }
-            &::after {
-                @include heart-restaurant;
-                @include heart-gradient;
-                opacity: 0;
-                font-weight: 900;
-            }
-            &:hover::after {
-                opacity: 1;
-                transition-duration: .35s;
-            }
-        
-        }
+        }   
     }
-
+    &-heart {
+        &::before {
+            @include heart-restaurant;
+        }
+        &::after {
+            @include heart-restaurant;
+            @include heart-gradient;
+            opacity: 0;
+            font-weight: 900;
+        }
+        &:hover::after {
+            opacity: 1;
+            transition-duration: .5s;
+            cursor: pointer;
+        }           
+    }
+    .heart {
+        display: none;
+    }
+    .heart:checked + label::after {
+        opacity: 1;
+    }
 }

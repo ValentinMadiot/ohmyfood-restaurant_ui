@@ -24,8 +24,8 @@
 @mixin heart-restaurant {
   position: absolute;
   right: 3rem;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 4rem;
+  transform: translateY(50%);
   content: "\f004";
   font: var(--fa-font-solid);
   font-size: 2.5rem;

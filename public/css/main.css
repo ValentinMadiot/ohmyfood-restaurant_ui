@@ -248,22 +248,22 @@ body {
   font-size: 1.8rem;
   padding-top: 0.5rem;
 }
-.restaurants-card__ico::before {
+.restaurants-heart::before {
   position: absolute;
   right: 3rem;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 4rem;
+  transform: translateY(50%);
   content: "\f004";
   font: var(--fa-font-solid);
   font-size: 2.5rem;
   font-weight: 400;
   opacity: 1;
 }
-.restaurants-card__ico::after {
+.restaurants-heart::after {
   position: absolute;
   right: 3rem;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 4rem;
+  transform: translateY(50%);
   content: "\f004";
   font: var(--fa-font-solid);
   font-size: 2.5rem;
@@ -276,9 +276,16 @@ body {
   opacity: 0;
   font-weight: 900;
 }
-.restaurants-card__ico:hover::after {
+.restaurants-heart:hover::after {
   opacity: 1;
-  transition-duration: 0.35s;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+.restaurants .heart {
+  display: none;
+}
+.restaurants .heart:checked + label::after {
+  opacity: 1;
 }
 
 .footer {
@@ -391,6 +398,7 @@ body {
 .card-restaurant__heart:hover::after {
   opacity: 1;
   transition-duration: 0.35s;
+  cursor: pointer;
 }
 .card-list {
   display: grid;
@@ -486,6 +494,12 @@ body {
   transition-duration: 0.5s;
   cursor: pointer;
   background-image: linear-gradient(to right bottom, #9356DC, #FF79DA);
+}
+.card .heart {
+  display: none;
+}
+.card .heart:checked + label::after {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=main.css.map */
