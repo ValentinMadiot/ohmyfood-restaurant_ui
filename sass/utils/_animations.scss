@@ -2,7 +2,7 @@
 //Menu
 @keyframes menu {
     0% {
-        transform: translateY(20%);
+        transform: translateY(30%);
         opacity: 0;   
     }
     100% {
@@ -26,6 +26,5 @@
     to {
         width: 2rem;
         height: 2rem;
-        transform: translate3d (0, -2rem, 0);
     }  
 }

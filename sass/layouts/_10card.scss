@@ -60,7 +60,7 @@
         &__menus {
             padding: 3rem 0;
             max-width: 100%;
-        }
+        }     
     }
     &-menu {
         position: relative;
@@ -72,11 +72,14 @@
         position: relative;
         @include menu-shadow;
         overflow: hidden;
-        animation: menu 3s;
-        animation-timing-function: cubic-bezier(.5,2,.5,1);
+        &--anim-menu {
+        animation: menu 1.5s;
         animation-fill-mode: both;
-        .delay1 {
-            animation-delay: 10s;
+        @for $i from 1 through 3 {
+                &:nth-child(#{$i}) {
+                    animation-delay: 300ms * $i;
+                }
+            }
         }
         &__title {
         font-weight: 500;
