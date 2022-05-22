@@ -3,12 +3,16 @@
     text-align: center;
     padding: 3rem 2rem 6rem 2rem;
     background-color: $color-gray2;
+
+    // P
     &__subtitle {
         font-size: 1.7rem;
         font-weight: 300;
         color: darken($color: grey, $amount: 30);
         padding: 1.5rem 0 3rem 0;
     }
+
+    // INPUT
     &__button {
         font-size: 1.7rem;
         font-weight: 500;
@@ -18,9 +22,9 @@
         border-radius: 3rem;
         border: none;
         @include button-shadow;
-            &:hover {
-                transform: scale(1.10);
-                transition: .40s;
+        &:hover {
+            transform: scale(1.10);
+            transition: .40s;
             background-image: linear-gradient(to right bottom, $color-primary,$color-secondary);
             color: white;
             cursor: pointer;

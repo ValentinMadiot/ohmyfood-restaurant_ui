@@ -7,9 +7,13 @@
     gap: 1.5rem;
     padding: 2rem;
     color: darken($color: grey, $amount: 30);
+
+    // ICO
     &__ico {
         font-size: 2rem;
     }
+
+    // H2
     &__city {
         font-size: 2rem;
     }

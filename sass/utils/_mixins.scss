@@ -1,12 +1,12 @@
 //! MIXINS
-//Breakpoint
+// Breakpoint
 @mixin media-breakpoint-up($size) {
     @media (min-width: map_get($breakpoints, $size)) {
       @content;
     }
 }
 
-//Shadow
+// Shadow
 @mixin button-shadow {
   box-shadow: 0rem .4rem 1rem rgba(0,0,0,.25);
 }
@@ -14,13 +14,13 @@
   box-shadow: .25rem .25rem 1rem rgba(0,0,0,.1);
 }
 
-//Effect
+// Effect
 @mixin button-effect {
   transform: scale(1.03);
   transition-duration: .50s;
 }
 
-//Icons
+// Hearts
 @mixin heart-restaurant {
   position: absolute;
   right: 3rem;
@@ -42,7 +42,7 @@
   opacity: 1;
 }
 
-//Gradient
+// Gradient
 @mixin heart-gradient {
   background: linear-gradient(to left top,$color-primary,$color-secondary);
   color: transparent;

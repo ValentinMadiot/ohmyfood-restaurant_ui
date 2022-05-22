@@ -5,15 +5,15 @@
 @import "./base";
 
 // MAIN PAGE (00)
+@import "./layouts/00loader";
 @import "./layouts/01header";
 @import "./layouts/02place";
 @import "./layouts/03explore";
 @import "./layouts/04steps";
 @import "./layouts/05restaurants";
 @import "./layouts/06footer";
-@import "./layouts/00loader";
 
-// MENU 1 La palette du goût (10)
+// MENUS (10)
 @import "./layouts/10card"
 
 

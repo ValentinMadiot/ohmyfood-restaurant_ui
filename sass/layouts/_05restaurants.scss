@@ -2,9 +2,13 @@
 .restaurants {
     background-color: $color-gray2;
     padding: 5rem 2rem;
+
+    // H2
     &__title {
         padding-left: 2rem;
     }
+
+    // UL
     &__list {
         padding: 3rem 0;
         display: grid;
@@ -13,66 +17,90 @@
             grid-template-columns: repeat(2,1fr);            
         }
     }
-    &-card {
+}
+
+// LI
+.restaurants-card {
+    position: relative;
+    border-radius: 1.5rem;
+    @include button-shadow;
+
+    &:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+    }
+
+    // NEW
+    &--new::before {
+        position: absolute;
+        right: 1.5rem;
+        top: 1.5rem;
+        padding: 1rem 1.5rem;
+        border-radius: .3rem;
+        content: "Nouveau";
+        font-weight: 500;
+        font-size: 1.8rem;
+        background-color: $color-thirdly;
+        color: darken($color: $color-thirdly, $amount: 50);
+    }
+    
+    // IMG
+    &__img {
+        object-fit: cover;
+        height: 210px;
+        width: 100%;
+        border-radius: 1.5rem 1.5rem 0 0;
+    }
+
+    //! FOOTER
+    &__footer {
         position: relative;
-        border-radius: 1.5rem;
-        @include button-shadow;
-        &:hover {
-            transform: scale(1.03);
-            cursor: pointer;
-        }
-        &--new::before {
-            position: absolute;
-            right: 1.5rem;
-            top: 1.5rem;
-            padding: 1rem 1.5rem;
-            border-radius: .3rem;
-            content: "Nouveau";
-            font-weight: 500;
-            font-size: 1.8rem;
-            background-color: $color-thirdly;
-            color: darken($color: $color-thirdly, $amount: 50);
-        }        
-        &__img {
-            object-fit: cover;
-            height: 210px;
-            width: 100%;
-            border-radius: 1.5rem 1.5rem 0 0;
-        }
-        &__footer {
-            position: relative;
-            padding: 1.5rem 1.5rem;
-            border-radius: 0rem 0rem 1.5rem 1.5rem;
-        }
+        padding: 1.5rem 1.5rem;
+        border-radius: 0rem 0rem 1.5rem 1.5rem;
+    }
+
+        // H3
         &__title {
             font-size: 2rem;
         }
+
+        // P
         &__txt {
             font-weight: 300;
             font-size: 1.8rem;
             padding-top: .5rem;
         }   
+}
+
+// HEART LABEL
+.restaurants-heart {
+
+    // HEART EMPTY
+    &::before {
+        @include heart-restaurant;
     }
-    &-heart {
-        &::before {
-            @include heart-restaurant;
-        }
-        &::after {
-            @include heart-restaurant;
-            @include heart-gradient;
-            opacity: 0;
-            font-weight: 900;
-        }
-        &:hover::after {
-            opacity: 1;
-            transition-duration: .5s;
-            cursor: pointer;
-        }           
+
+    // HEART FULL
+    &::after {
+        @include heart-restaurant;
+        @include heart-gradient;
+        opacity: 0;
+        font-weight: 900;
     }
-    .heart {
-        display: none;
-    }
-    .heart:checked + label::after {
+    
+    // HOVER HEART FULL
+    &:hover::after {
         opacity: 1;
-    }
+        transition-duration: .5s;
+        cursor: pointer;
+    }           
+}
+
+// HEART INPUT
+.heart {
+    display: none;
+}
+
+.heart:checked + label::after {
+    opacity: 1;
 }

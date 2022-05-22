@@ -4,32 +4,33 @@
     padding: 2.5rem 3rem;
     color: white;
     font-weight: 500;
-    
+
+    // H2
     &__title {
         font-family: 'Shrikhand', cursive;
         font-weight: 500;
         font-size: 2rem;
+
         &:hover {
             color: lighten($color: $color-primary, $amount: 10);
         }
-        @include media-breakpoint-up (lg) {
-            padding-left: 3rem;
-            }
     }
+
+    // UL
     &__list {
         padding: 1rem 0 0 0;
-        @include media-breakpoint-up (lg) {
-            padding-left: 3rem;
-            }
     }
+    
+    // LI
     &__element {
         padding: .5rem 0;
+
         &:hover {
             color: lighten($color: $color-primary, $amount: 10);
         }
+
         &--ico {
             width: 2rem;
-            font-size: 1.7 rem;
         }  
     }
 }

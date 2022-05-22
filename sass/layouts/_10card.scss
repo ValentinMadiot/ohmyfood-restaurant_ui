@@ -1,100 +1,116 @@
 //! PAGE RESTAURANT
 .card {
-    background-color: $color-gray2;
-    margin-top: -6rem;
-    padding: 2rem;
-    border-radius: 4rem 4rem 0 0;
+
+    // IMG
     &-img {
         display: block;
         width: 100%;
         max-height: 50rem;
         object-fit: cover;
     }
+
+    // SECTION
+    background-color: $color-gray2;
+    margin-top: -6rem;
+    padding: 2rem;
+    border-radius: 4rem 4rem 0 0;
+
+    // H2
     &-restaurant {
         font-family: 'Shrikhand', cursive;
-        padding: 2rem 0 4.5rem 1rem;
+        padding: 2rem 1rem 4.5rem 1rem;
         position: relative;
-        &__heart {
-            &::before {
-                @include heart-menu;
-            }
-            &::after {
-                @include heart-menu;
-                @include heart-gradient;
-                opacity: 0;
-                font-weight: 900;
-            }
-            &:hover::after {
-                opacity: 1;
-                transition-duration: .35s;
-                cursor: pointer;
-            }
+        font-size: 2rem;
+        @include media-breakpoint-up (xs) {
+            font-size: 2.5rem;
         }
     }
-    &-list {
-        display: grid;
-        @include media-breakpoint-up (lg) {
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 1rem;
-        }
+}
+
+// GRID
+.card-list {
+    display: grid;
+    @include media-breakpoint-up (lg) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
     }
-    &-plat {
-        overflow: hidden;
-        padding: 0 1rem;
-        &__title {
-            text-transform: uppercase;
-            font-weight: 400;
-            font-size: 1.8rem;
-            padding-left: 1rem;
-            position: relative;
-            &::after {
-                position: absolute;
-                content: "";
-                background-color: #99e2d0;
-                width: 4.5rem;
-                height: .4rem;
-                left: 1rem;
-                bottom: -0.8rem;
-            }
-        }
-        &__menus {
-            padding: 3rem 0;
-            max-width: 100%;
-        }     
-    }
-    &-menu {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        line-height: 2.5rem;
-        margin-bottom: 1.5rem;
-        border-radius: 1.5rem;
-        background-color: white;
+}
+
+// ARTICLE
+.card-plat {
+    overflow: hidden;
+    padding: 0 1rem;
+
+    // H3
+    &__title {
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 1.8rem;
+        padding-left: 1rem;
         position: relative;
-        @include menu-shadow;
-        overflow: hidden;
-        &--anim-menu {
-            animation: menu 1.5s;
-            animation-fill-mode: both;
-            @for $i from 1 through 3 {
-                &:nth-child(#{$i}) {
-                    animation-delay: 300ms * $i;
-                }
+
+        // LINE GREEN
+        &::after {
+            position: absolute;
+            content: "";
+            background-color: #99e2d0;
+            width: 4.5rem;
+            height: .4rem;
+            left: 1rem;
+            bottom: -0.8rem;
+        }
+    }
+
+    // UL
+    &__menus {
+        padding: 3rem 0;
+        max-width: 100%;
+    }     
+}
+
+// LI
+.card-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 2.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 1.5rem;
+    background-color: white;
+    position: relative;
+    @include menu-shadow;
+    overflow: hidden;
+
+    //! ANIMATION MENU
+    &--anim-menu {
+        animation: menu 1.5s;
+        animation-fill-mode: both;
+        @for $i from 1 through 4 {
+            &:nth-child(#{$i}) {
+                animation-delay: 300ms * $i;
             }
         }
-        &:hover .card-menu__check{
-            margin-right: 0;
-        }
-        &:hover .fa-circle-check {
-            transform: rotate(0deg);
-            transition: .5s;
+    }
 
-        }
-        &-left {
-            padding: 1rem 0 1rem 1.5rem; 
-            overflow: hidden;
+    //! BUTTON CHECK
+    &:hover .card-menu__check{
+        margin-right: 0;
+    }
+    &:hover .fa-circle-check {
+        transform: rotate(0deg);
+        transition: .6s;  
+    }
+    .fa-circle-check {
+        transform: rotate(360deg);
+    }
 
-        }
+    //! HEADER
+    &-left {
+        padding: 1rem 0 1rem 1.5rem; 
+        overflow: hidden;    
+    }
+
+        // H4
         &__title {
             font-weight: 500;
             font-size: 1.8rem;
@@ -102,6 +118,8 @@
             overflow: hidden;
             white-space: nowrap;
         }
+
+        // P
         &__describe {
             font-weight: 300;
             font-size: 1.6rem;
@@ -109,9 +127,13 @@
             overflow: hidden;
             white-space: nowrap;
         }
-        &-right {
-            display: flex;  
-        }
+
+    //! FOOTER
+    &-right {
+        display: flex;  
+    }
+
+        // P
         &__price {
             display: flex;
             align-items: flex-end;
@@ -119,6 +141,8 @@
             font-size: 1.5rem;
             padding: 1rem;
         }
+
+        // ICO
         &__check {
             display: flex;
             align-items: center;
@@ -129,40 +153,63 @@
             width: 7rem;
             height: 7rem;
             margin-right: -7rem;
-            transform: rotate (360deg);
             transition-duration: .5s;
         }
-    }
-    &-button {
-        display: flex;
-        justify-content: center;
-        padding: .6rem 0 3rem 0;    
-        &__value {
-            font-size: 2rem;
-            font-weight: 500;
-            color: white;
-            padding: 1.5rem 3.5rem;
-            border-radius: 3rem;
-            border: none;
-            background-image: linear-gradient(to left top,$color-primary,$color-secondary);
-            @include button-shadow;
-            &:hover {
-                @include button-effect;
-                cursor: pointer;
-                background-image: linear-gradient(to right bottom, $color-primary,$color-secondary);
-            }
+}
+
+//! BUTTON
+.card-button {
+    display: flex;
+    justify-content: center;
+    padding: .6rem 0 3rem 0; 
+
+    &__value {
+        font-size: 2rem;
+        font-weight: 500;
+        color: white;
+        padding: 1.5rem 5rem;
+        border-radius: 3rem;
+        border: none;
+        background-image: linear-gradient(to left top,$color-primary,$color-secondary);
+        @include button-shadow;
+
+        &:hover {
+            @include button-effect;
+            cursor: pointer;
+            background-image: linear-gradient(to right bottom, $color-primary,$color-secondary);
         }
     }
-    .heart {
-        display: none;
+}
+
+//! HEART LABEL
+.card-restaurant__heart {
+
+    // HEART EMPTY
+    &::before {
+        @include heart-menu;
     }
-    .heart:checked + label::after {
+
+    // HEART FULL
+    &::after {
+        @include heart-menu;
+        @include heart-gradient;
+        opacity: 0;
+        font-weight: 900;
+    }
+
+    // HOVER HEART FULL
+    &:hover::after {
         opacity: 1;
-    }
-    .check {
-        display: none;
+        transition-duration: .35s;
+        cursor: pointer;
     }
 }
-.fa-circle-check {
-    transform: rotate(360deg);
+
+//! HEART INPUT
+.heart {
+    display: none;
+}
+
+.heart:checked + label::after {
+    opacity: 1;
 }

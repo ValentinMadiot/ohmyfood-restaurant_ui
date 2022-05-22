@@ -8,8 +8,9 @@ $color-gray2: #f3f3f3; //#fafafa
 
 // Breakpoints
 $breakpoints: (
+    xs: 350px,
     sm: 576px,
     md: 768px,
     lg: 992px,
-    xl: 1200px
+    xl: 1200px,
 );

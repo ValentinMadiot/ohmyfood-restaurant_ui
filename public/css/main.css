@@ -72,6 +72,35 @@ body {
   position: relative;
 }
 
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: #f3f3f3;
+  opacity: 0.9;
+  inset: 0;
+  z-index: 1;
+  animation: loader 0s 2s forwards;
+}
+.loader__dot {
+  display: inline-block;
+  background-color: #9356DC;
+  width: 0rem;
+  height: 0rem;
+  border-radius: 50%;
+  margin: 0 1rem;
+  animation: bounce 0.6s infinite alternate;
+}
+.loader__dot:nth-child(2) {
+  background-color: #FF79DA;
+  animation-delay: 0.2s;
+}
+.loader__dot:nth-child(3) {
+  background-color: #99E2D0;
+  animation-delay: 0.4s;
+}
+
 .header {
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
   padding: 2.3rem;
@@ -88,6 +117,9 @@ body {
   top: 50%;
   transform: translateY(-50%);
   font-size: 2.3rem;
+}
+.header:hover .header--arrow {
+  color: #ae80e5;
 }
 
 .place {
@@ -153,6 +185,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
 .steps__element {
   position: relative;
   font-weight: 500;
@@ -184,6 +217,7 @@ body {
 .steps__element:hover .steps__ico {
   color: #9356DC;
 }
+
 .steps__ico {
   padding: 0 2rem 0 2rem;
   color: gray;
@@ -207,6 +241,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 .restaurants-card {
   position: relative;
   border-radius: 1.5rem;
@@ -247,6 +282,7 @@ body {
   font-size: 1.8rem;
   padding-top: 0.5rem;
 }
+
 .restaurants-heart::before {
   position: absolute;
   right: 3rem;
@@ -280,10 +316,12 @@ body {
   transition-duration: 0.5s;
   cursor: pointer;
 }
-.restaurants .heart {
+
+.heart {
   display: none;
 }
-.restaurants .heart:checked + label::after {
+
+.heart:checked + label::after {
   opacity: 1;
 }
 
@@ -301,18 +339,8 @@ body {
 .footer__title:hover {
   color: #ae80e5;
 }
-@media (min-width: 992px) {
-  .footer__title {
-    padding-left: 3rem;
-  }
-}
 .footer__list {
   padding: 1rem 0 0 0;
-}
-@media (min-width: 992px) {
-  .footer__list {
-    padding-left: 3rem;
-  }
 }
 .footer__element {
   padding: 0.5rem 0;
@@ -322,36 +350,6 @@ body {
 }
 .footer__element--ico {
   width: 2rem;
-  font-size: 1.7 rem;
-}
-
-.loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  background-color: #f3f3f3;
-  opacity: 0.9;
-  inset: 0;
-  z-index: 1;
-  animation: loader 0s 1s forwards;
-}
-.loader__dot {
-  display: inline-block;
-  background-color: #9356DC;
-  width: 0rem;
-  height: 0rem;
-  border-radius: 50%;
-  margin: 0 1rem;
-  animation: bounce 0.6s infinite alternate;
-}
-.loader__dot:nth-child(2) {
-  background-color: #FF79DA;
-  animation-delay: 0.2s;
-}
-.loader__dot:nth-child(3) {
-  background-color: #99E2D0;
-  animation-delay: 0.4s;
 }
 
 .card {
@@ -368,36 +366,16 @@ body {
 }
 .card-restaurant {
   font-family: "Shrikhand", cursive;
-  padding: 2rem 0 4.5rem 1rem;
+  padding: 2rem 1rem 4.5rem 1rem;
   position: relative;
+  font-size: 2rem;
 }
-.card-restaurant__heart::before {
-  position: absolute;
-  right: 1rem;
-  content: "\f004";
-  font: var(--fa-font-solid);
-  font-weight: 400;
-  opacity: 1;
+@media (min-width: 350px) {
+  .card-restaurant {
+    font-size: 2.5rem;
+  }
 }
-.card-restaurant__heart::after {
-  position: absolute;
-  right: 1rem;
-  content: "\f004";
-  font: var(--fa-font-solid);
-  font-weight: 400;
-  opacity: 1;
-  background: linear-gradient(to left top, #9356DC, #FF79DA);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 0;
-  font-weight: 900;
-}
-.card-restaurant__heart:hover::after {
-  opacity: 1;
-  transition-duration: 0.35s;
-  cursor: pointer;
-}
+
 .card-list {
   display: grid;
 }
@@ -407,6 +385,7 @@ body {
     grid-gap: 1rem;
   }
 }
+
 .card-plat {
   overflow: hidden;
   padding: 0 1rem;
@@ -431,6 +410,7 @@ body {
   padding: 3rem 0;
   max-width: 100%;
 }
+
 .card-menu {
   display: flex;
   align-items: center;
@@ -456,12 +436,18 @@ body {
 .card-menu--anim-menu:nth-child(3) {
   animation-delay: 900ms;
 }
+.card-menu--anim-menu:nth-child(4) {
+  animation-delay: 1200ms;
+}
 .card-menu:hover .card-menu__check {
   margin-right: 0;
 }
 .card-menu:hover .fa-circle-check {
   transform: rotate(0deg);
-  transition: 0.5s;
+  transition: 0.6s;
+}
+.card-menu .fa-circle-check {
+  transform: rotate(360deg);
 }
 .card-menu-left {
   padding: 1rem 0 1rem 1.5rem;
@@ -501,9 +487,9 @@ body {
   width: 7rem;
   height: 7rem;
   margin-right: -7rem;
-  transform: rotate 360deg;
   transition-duration: 0.5s;
 }
+
 .card-button {
   display: flex;
   justify-content: center;
@@ -513,7 +499,7 @@ body {
   font-size: 2rem;
   font-weight: 500;
   color: white;
-  padding: 1.5rem 3.5rem;
+  padding: 1.5rem 5rem;
   border-radius: 3rem;
   border: none;
   background-image: linear-gradient(to left top, #9356DC, #FF79DA);
@@ -525,18 +511,41 @@ body {
   cursor: pointer;
   background-image: linear-gradient(to right bottom, #9356DC, #FF79DA);
 }
-.card .heart {
-  display: none;
-}
-.card .heart:checked + label::after {
+
+.card-restaurant__heart::before {
+  position: absolute;
+  right: 1rem;
+  content: "\f004";
+  font: var(--fa-font-solid);
+  font-weight: 400;
   opacity: 1;
 }
-.card .check {
+.card-restaurant__heart::after {
+  position: absolute;
+  right: 1rem;
+  content: "\f004";
+  font: var(--fa-font-solid);
+  font-weight: 400;
+  opacity: 1;
+  background: linear-gradient(to left top, #9356DC, #FF79DA);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  font-weight: 900;
+}
+.card-restaurant__heart:hover::after {
+  opacity: 1;
+  transition-duration: 0.35s;
+  cursor: pointer;
+}
+
+.heart {
   display: none;
 }
 
-.fa-circle-check {
-  transform: rotate(360deg);
+.heart:checked + label::after {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=main.css.map */
