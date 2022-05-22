@@ -432,8 +432,9 @@ body {
   max-width: 100%;
 }
 .card-menu {
-  position: relative;
-  padding: 1.1rem 6rem 1.1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   line-height: 2.5rem;
   margin-bottom: 1.5rem;
   border-radius: 1.5rem;
@@ -455,6 +456,17 @@ body {
 .card-menu--anim-menu:nth-child(3) {
   animation-delay: 900ms;
 }
+.card-menu:hover .card-menu__check {
+  margin-right: 0;
+}
+.card-menu:hover .fa-circle-check {
+  transform: rotate(0deg);
+  transition: 0.5s;
+}
+.card-menu-left {
+  padding: 1rem 0 1rem 1.5rem;
+  overflow: hidden;
+}
 .card-menu__title {
   font-weight: 500;
   font-size: 1.8rem;
@@ -469,22 +481,35 @@ body {
   overflow: hidden;
   white-space: nowrap;
 }
+.card-menu-right {
+  display: flex;
+}
 .card-menu__price {
-  position: absolute;
-  right: 2rem;
-  bottom: 1.5rem;
+  display: flex;
+  align-items: flex-end;
   font-weight: 500;
   font-size: 1.5rem;
+  padding: 1rem;
 }
 .card-menu__check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #99E2D0;
+  font-size: 2.5rem;
+  color: white;
+  width: 7rem;
+  height: 7rem;
+  margin-right: -7rem;
+  transform: rotate 360deg;
+  transition-duration: 0.5s;
 }
-.card-buton {
+.card-button {
   display: flex;
   justify-content: center;
   padding: 0.6rem 0 3rem 0;
 }
-.card-buton__value {
+.card-button__value {
   font-size: 2rem;
   font-weight: 500;
   color: white;
@@ -494,7 +519,7 @@ body {
   background-image: linear-gradient(to left top, #9356DC, #FF79DA);
   box-shadow: 0rem 0.4rem 1rem rgba(0, 0, 0, 0.25);
 }
-.card-buton__value:hover {
+.card-button__value:hover {
   transform: scale(1.03);
   transition-duration: 0.5s;
   cursor: pointer;
@@ -505,6 +530,13 @@ body {
 }
 .card .heart:checked + label::after {
   opacity: 1;
+}
+.card .check {
+  display: none;
+}
+
+.fa-circle-check {
+  transform: rotate(360deg);
 }
 
 /*# sourceMappingURL=main.css.map */

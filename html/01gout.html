@@ -18,8 +18,11 @@
 
         <!-- HEADER -->
         <header class="header">
-            <a href="../index.html"><i class="header--arrow fas fa-arrow-left"></i></a>
-            <h1 class="header__title">Ohmyfood</h1>
+            <a href="../index.html">
+                <i class="header--arrow fas fa-arrow-left"></i>
+                <h1 class="header__title">Ohmyfood</h1>
+            </a>
+            
         </header>
 
         <!-- MAIN SECTION -->
@@ -27,28 +30,42 @@
             <img class="card-img" src="../public/img/restaurants/01gout.jpg" alt="Menu La palette du goût">
             <section class="card container">
                 <h2 class="card-restaurant">La palette du goût
-                    <input class="heart" type="checkbox" id="heart5">
-                    <label for="heart5" class="card-restaurant__heart"></label>
+                    <input class="heart" type="checkbox" id="heart1">
+                    <label for="heart1" class="card-restaurant__heart"></label>
                 </h2>
                 <div class="card-list">
                     <article class="card-plat">
                         <h3 class="card-plat__title">Entrées</h3>
                         <ul class="card-plat__menus">
                             <li class="card-menu card-menu--anim-menu">
-                                <h4 class="card-menu__title">Fricassée d'escargot</h4>
-                                <p class="card-menu__describe">Au piment d'Espelette</p>
-                                <p class="card-menu__price">25€</p>
-                                <p class="card-menu__check"></p>
+                               <header class="card-menu-left">
+                                    <h4 class="card-menu__title">Fricassée d'escargot</h4>
+                                    <p class="card-menu__describe">Au piment d'Espelette</p>
+                                </header>
+                                <footer class="card-menu-right">
+                                    <p class="card-menu__price">25€</p>
+                                    <p class="card-menu__check"><i class="fa-solid fa-circle-check"></i></p>
+                                </footer>
                             </li>
                             <li class="card-menu card-menu--anim-menu">
-                                <h4 class="card-menu__title">Foie gras de canard mi-cuit</h4>
-                                <p class="card-menu__describe">Et ses copeaux de truffe noire</p>
-                                <p class="card-menu__price">35€</p>
+                                <header class="card-menu-left">
+                                    <h4 class="card-menu__title">Foie gras de canard mi-cuit</h4>
+                                    <p class="card-menu__describe">Et ses copeaux de truffe noire</p>
+                                </header>
+                                <footer class="card-menu-right">
+                                    <p class="card-menu__price">35€</p>
+                                    <p class="card-menu__check"><i class="fa-solid fa-circle-check"></i></p>
+                                </footer>
                             </li>
                             <li class="card-menu card-menu--anim-menu"> 
-                                <h4 class="card-menu__title">Oeuf au plat</h4>
-                                <p class="card-menu__describe">Assaisonné à la truffe sur lit de caviar</p>
-                                <p class="card-menu__price">20€</p>
+                                <header class="card-menu-left">
+                                    <h4 class="card-menu__title">Oeuf au plat</h4>
+                                    <p class="card-menu__describe">Assaisonné à la truffe sur lit de caviar</p>
+                                </header>
+                                <footer class="card-menu-right">
+                                    <p class="card-menu__price">20€</p>
+                                    <p class="card-menu__check"><i class="fa-solid fa-circle-check"></i></p>
+                                </footer>
                             </li>
                         </ul>
                     </article>
@@ -56,19 +73,34 @@
                         <h3 class="card-plat__title">Plats</h3>
                         <ul class="card-plat__menus">
                             <li class="card-menu card-menu--anim-menu">
-                                <h4 class="card-menu__title">Filet de boeuf aux herbes</h4>
-                                <p class="card-menu__describe">Accompagné de sa ribambelle de légumes</p>
-                                <p class="card-menu__price">40€</p>
+                                <header class="card-menu-left">
+                                    <h4 class="card-menu__title">Filet de boeuf aux herbes</h4>
+                                    <p class="card-menu__describe">Accompagné de sa ribambelle de légumes</p>
+                                </header>
+                                <footer class="card-menu-right">
+                                    <p class="card-menu__price">40€</p>
+                                    <p class="card-menu__check"><i class="fa-solid fa-circle-check"></i></p>
+                                </footer>
                             </li>
                             <li class="card-menu card-menu--anim-menu">
-                                <h4 class="card-menu__title">Parmentier de queue de boeuf</h4>
-                                <p class="card-menu__describe">À la truffe noire sur sa purée de panais</p>
-                                <p class="card-menu__price">35€</p>
+                                <header class="card-menu-left">
+                                    <h4 class="card-menu__title">Parmentier de queue de boeuf</h4>
+                                    <p class="card-menu__describe">À la truffe noire sur sa purée de panais</p>
+                                </header>
+                                <footer class="card-menu-right">
+                                    <p class="card-menu__price">35€</p>
+                                    <p class="card-menu__check"><i class="fa-solid fa-circle-check"></i></p>
+                                </footer>
                             </li>
                             <li class="card-menu card-menu--anim-menu">
-                                <h4 class="card-menu__title">Filet de turbot</h4>
-                                <p class="card-menu__describe">Aux agrumes</p>
-                                <p class="card-menu__price">44€</p>
+                                <header class="card-menu-left">
+                                    <h4 class="card-menu__title">Filet de turbot</h4>
+                                    <p class="card-menu__describe">Aux agrumes</p>
+                                </header>
+                                <footer class="card-menu-right">
+                                    <p class="card-menu__price">44€</p>
+                                    <p class="card-menu__check"><i class="fa-solid fa-circle-check"></i></p>
+                                </footer>
                             </li>
                         </ul>
                     </article>
@@ -76,24 +108,39 @@
                         <h3 class="card-plat__title">Desserts</h3>
                         <ul class="card-plat__menus">
                             <li class="card-menu card-menu--anim-menu">
-                                <h4 class="card-menu__title">Paris-Brest</h4>
-                                <p class="card-menu__describe">Revisité</p>
-                                <p class="card-menu__price">18€</p>
+                                <header class="card-menu-left">
+                                    <h4 class="card-menu__title">Paris-Brest</h4>
+                                    <p class="card-menu__describe">Revisité</p>
+                                </header>
+                                <footer class="card-menu-right">
+                                    <p class="card-menu__price">18€</p>
+                                    <p class="card-menu__check"><i class="fa-solid fa-circle-check"></i></p>
+                                </footer>
                             </li>
                             <li class="card-menu card-menu--anim-menu">
-                                <h4 class="card-menu__title">Macaron au chocolat d'exception </h4>
-                                <p class="card-menu__describe">Et glace à la vanille de Madagascar</p>
-                                <p class="card-menu__price">22€</p>
+                                <header class="card-menu-left">
+                                    <h4 class="card-menu__title">Macaron au chocolat d'exception </h4>
+                                    <p class="card-menu__describe">Et glace à la vanille de Madagascar</p>
+                                </header>
+                                <footer class="card-menu-right">
+                                    <p class="card-menu__price">22€</p>
+                                    <p class="card-menu__check"><i class="fa-solid fa-circle-check"></i></p>
+                                </footer>
                             </li>
                             <li class="card-menu card-menu--anim-menu">
-                                <h4 class="card-menu__title">Mousse au chocolat</h4>
-                                <p class="card-menu__describe">Au piment d'Espelette et à la truffe noire</p>
-                                <p class="card-menu__price">23€</p>
+                                <header class="card-menu-left">
+                                    <h4 class="card-menu__title">Mousse au chocolat</h4>
+                                    <p class="card-menu__describe">Au piment d'Espelette et à la truffe noire</p>
+                                </header>
+                                <footer class="card-menu-right">
+                                    <p class="card-menu__price">23€</p>
+                                    <p class="card-menu__check"><i class="fa-solid fa-circle-check"></i></p>
+                                </footer>
                             </li>
                         </ul>
                     </article>
                 </div>
-                <div class="card-buton"><input class="card-buton__value" type="submit" value="Commander"></div>
+                <div class="card-button"><input class="card-button__value" type="submit" value="Commander"></div>
             </section>
         </main>
 
