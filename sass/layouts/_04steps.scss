@@ -28,7 +28,8 @@
     background-color: $color-gray2;
     padding: 2.5rem 1rem;
     border-radius: 2rem;
-    @include button-shadow;
+    @include btn-shad;
+    @include transition;
 
     // NUMBERS
     &::before {
@@ -58,7 +59,7 @@
 
 // ICO
 .steps__ico {
-    padding: 0 2rem 0 2rem;
-    color: darken($color: grey, $amount: 0);
+    padding: 0 2rem;
+    color: grey;
     font-size: large;
 }

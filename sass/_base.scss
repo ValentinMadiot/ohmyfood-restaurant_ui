@@ -28,7 +28,7 @@ html {
 }
 body {
     font-size: 1.4rem;
-    font-family: "Roboto", sans-serif;
+    @include police-roboto;
 }
 h2 {
     font-size: 2.5rem;

@@ -1,26 +1,83 @@
 //! MIXINS
-// Breakpoint
+
+//! Breakpoint
 @mixin media-breakpoint-up($size) {
     @media (min-width: map_get($breakpoints, $size)) {
       @content;
     }
 }
 
-// Shadow
-@mixin button-shadow {
+//! Flex-center
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+//! Police
+@mixin police-roboto {
+  font-family: "Roboto", sans-serif;
+}
+@mixin police-shrikhand {
+  font-family: 'Shrikhand', cursive;
+}
+
+//! Color 
+@mixin light-purple {
+  color: lighten($color: $color-primary, $amount: 10);
+}
+@mixin dark-grey {
+  color: darken($color: grey, $amount: 30);
+}
+
+//! Shadow
+@mixin btn-shad {
   box-shadow: 0rem .4rem 1rem rgba(0,0,0,.25);
 }
-@mixin menu-shadow {
+@mixin btn-shad-hov {
+  box-shadow: .25rem .25rem 1rem rgba(0,0,0,.5);
+}
+@mixin menu-shad {
   box-shadow: .25rem .25rem 1rem rgba(0,0,0,.1);
 }
 
-// Effect
-@mixin button-effect {
-  transform: scale(1.03);
-  transition-duration: .50s;
+//! Effect
+@mixin btn-effect {
+  transform: scale(1.05);
 }
 
-// Hearts
+//! Transition
+@mixin transition {
+  transition: all .5s ease-in-out;
+}
+
+//! Gradient
+@mixin heart-gradient {
+  background: linear-gradient(to left top,$color-primary,$color-secondary);
+  color: transparent;
+  background-clip: text; 
+  -webkit-background-clip: text; 
+}
+
+//! Button 
+@mixin btn-grad {
+  font-weight: 500;
+  background-image: linear-gradient(to left top,$color-primary,$color-secondary);
+  color: white;
+  border-radius: 3rem;
+  border: none;
+  @include btn-shad;
+  transition: all .5s ease-in-out;
+}
+@mixin btn-grad-hov {
+  background-image: linear-gradient(to right bottom, $color-primary,$color-secondary);
+  cursor: pointer;
+  opacity: .85;
+  @include btn-shad-hov;
+  @include btn-effect;
+}
+
+//! Hearts
 @mixin heart-restaurant {
   position: absolute;
   right: 3rem;
@@ -31,8 +88,8 @@
   font-size: 2.5rem;
   font-weight: 400;
   opacity: 1;
+  transition: all .5s ease-in-out;
 }
-
 @mixin heart-menu {
   position: absolute;
   right: 1rem;
@@ -40,12 +97,5 @@
   font: var(--fa-font-solid);
   font-weight: 400;
   opacity: 1;
-}
-
-// Gradient
-@mixin heart-gradient {
-  background: linear-gradient(to left top,$color-primary,$color-secondary);
-  color: transparent;
-  background-clip: text; 
-  -webkit-background-clip: text; 
+  transition: all .5s ease-in-out;
 }

@@ -6,7 +6,7 @@
 
     // H1
     &__title {
-    font-family: 'Shrikhand', cursive;
+    @include police-shrikhand;
     text-align: center;
     } 
 
@@ -21,6 +21,6 @@
     }
     
     &:hover .header--arrow{
-        color: lighten($color: $color-primary, $amount: 10);
+        @include light-purple;
     }
 }

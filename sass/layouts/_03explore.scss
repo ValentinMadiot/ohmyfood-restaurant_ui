@@ -8,26 +8,18 @@
     &__subtitle {
         font-size: 1.7rem;
         font-weight: 300;
-        color: darken($color: grey, $amount: 30);
         padding: 1.5rem 0 3rem 0;
+        @include dark-grey;
     }
 
     // INPUT
     &__button {
         font-size: 1.7rem;
-        font-weight: 500;
-        background-image: linear-gradient(to left top,$color-primary,$color-secondary);
-        color: white;
         padding: 1.3rem 2.5rem;
-        border-radius: 3rem;
-        border: none;
-        @include button-shadow;
+        @include btn-grad;
+
         &:hover {
-            transform: scale(1.10);
-            transition: .40s;
-            background-image: linear-gradient(to right bottom, $color-primary,$color-secondary);
-            color: white;
-            cursor: pointer;
+            @include btn-grad-hov
         }
     }
 }

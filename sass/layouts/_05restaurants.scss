@@ -23,10 +23,12 @@
 .restaurants-card {
     position: relative;
     border-radius: 1.5rem;
-    @include button-shadow;
+    @include btn-shad;
+    @include transition;
 
     &:hover {
-        transform: scale(1.03);
+        @include btn-effect;
+        @include btn-shad-hov;
         cursor: pointer;
     }
 
@@ -91,7 +93,6 @@
     // HOVER HEART FULL
     &:hover::after {
         opacity: 1;
-        transition-duration: .5s;
         cursor: pointer;
     }           
 }

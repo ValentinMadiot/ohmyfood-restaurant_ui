@@ -17,7 +17,7 @@
 
     // H2
     &-restaurant {
-        font-family: 'Shrikhand', cursive;
+        @include police-shrikhand;
         padding: 2rem 1rem 4.5rem 1rem;
         position: relative;
         font-size: 2rem;
@@ -78,7 +78,7 @@
     border-radius: 1.5rem;
     background-color: white;
     position: relative;
-    @include menu-shadow;
+    @include menu-shad;
     overflow: hidden;
 
     //! ANIMATION MENU
@@ -144,16 +144,14 @@
 
         // ICO
         &__check {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex;
             background-color: $color-thirdly;
             font-size: 2.5rem;
             color: white;
             width: 7rem;
             height: 7rem;
             margin-right: -7rem;
-            transition-duration: .5s;
+            @include transition;
         }
 }
 
@@ -165,18 +163,11 @@
 
     &__value {
         font-size: 2rem;
-        font-weight: 500;
-        color: white;
         padding: 1.5rem 5rem;
-        border-radius: 3rem;
-        border: none;
-        background-image: linear-gradient(to left top,$color-primary,$color-secondary);
-        @include button-shadow;
-
+        @include btn-grad;
+        
         &:hover {
-            @include button-effect;
-            cursor: pointer;
-            background-image: linear-gradient(to right bottom, $color-primary,$color-secondary);
+            @include btn-grad-hov;
         }
     }
 }

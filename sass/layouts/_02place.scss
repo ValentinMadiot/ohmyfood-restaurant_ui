@@ -1,12 +1,10 @@
 //! PLACE
 .place {
     background-color: $color-gray1; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex;
     gap: 1.5rem;
     padding: 2rem;
-    color: darken($color: grey, $amount: 30);
+    @include dark-grey;
 
     // ICO
     &__ico {

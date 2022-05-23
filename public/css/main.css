@@ -21,7 +21,7 @@
   }
 }
 @keyframes bounce {
-  to {
+  100% {
     width: 2rem;
     height: 2rem;
   }
@@ -146,25 +146,26 @@ body {
 .explore__subtitle {
   font-size: 1.7rem;
   font-weight: 300;
-  color: #343434;
   padding: 1.5rem 0 3rem 0;
+  color: #343434;
 }
 .explore__button {
   font-size: 1.7rem;
+  padding: 1.3rem 2.5rem;
   font-weight: 500;
   background-image: linear-gradient(to left top, #9356DC, #FF79DA);
   color: white;
-  padding: 1.3rem 2.5rem;
   border-radius: 3rem;
   border: none;
   box-shadow: 0rem 0.4rem 1rem rgba(0, 0, 0, 0.25);
+  transition: all 0.5s ease-in-out;
 }
 .explore__button:hover {
-  transform: scale(1.1);
-  transition: 0.4s;
   background-image: linear-gradient(to right bottom, #9356DC, #FF79DA);
-  color: white;
   cursor: pointer;
+  opacity: 0.85;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
 }
 
 .steps {
@@ -194,6 +195,7 @@ body {
   padding: 2.5rem 1rem;
   border-radius: 2rem;
   box-shadow: 0rem 0.4rem 1rem rgba(0, 0, 0, 0.25);
+  transition: all 0.5s ease-in-out;
 }
 .steps__element::before {
   position: absolute;
@@ -219,8 +221,8 @@ body {
 }
 
 .steps__ico {
-  padding: 0 2rem 0 2rem;
-  color: gray;
+  padding: 0 2rem;
+  color: grey;
   font-size: large;
 }
 
@@ -246,9 +248,11 @@ body {
   position: relative;
   border-radius: 1.5rem;
   box-shadow: 0rem 0.4rem 1rem rgba(0, 0, 0, 0.25);
+  transition: all 0.5s ease-in-out;
 }
 .restaurants-card:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
 .restaurants-card--new::before {
@@ -293,6 +297,7 @@ body {
   font-size: 2.5rem;
   font-weight: 400;
   opacity: 1;
+  transition: all 0.5s ease-in-out;
 }
 .restaurants-heart::after {
   position: absolute;
@@ -304,6 +309,7 @@ body {
   font-size: 2.5rem;
   font-weight: 400;
   opacity: 1;
+  transition: all 0.5s ease-in-out;
   background: linear-gradient(to left top, #9356DC, #FF79DA);
   color: transparent;
   background-clip: text;
@@ -313,7 +319,6 @@ body {
 }
 .restaurants-heart:hover::after {
   opacity: 1;
-  transition-duration: 0.5s;
   cursor: pointer;
 }
 
@@ -340,7 +345,7 @@ body {
   color: #ae80e5;
 }
 .footer__list {
-  padding: 1rem 0 0 0;
+  padding-top: 1rem;
 }
 .footer__element {
   padding: 0.5rem 0;
@@ -479,15 +484,15 @@ body {
 }
 .card-menu__check {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   background-color: #99E2D0;
   font-size: 2.5rem;
   color: white;
   width: 7rem;
   height: 7rem;
   margin-right: -7rem;
-  transition-duration: 0.5s;
+  transition: all 0.5s ease-in-out;
 }
 
 .card-button {
@@ -497,19 +502,21 @@ body {
 }
 .card-button__value {
   font-size: 2rem;
-  font-weight: 500;
-  color: white;
   padding: 1.5rem 5rem;
+  font-weight: 500;
+  background-image: linear-gradient(to left top, #9356DC, #FF79DA);
+  color: white;
   border-radius: 3rem;
   border: none;
-  background-image: linear-gradient(to left top, #9356DC, #FF79DA);
   box-shadow: 0rem 0.4rem 1rem rgba(0, 0, 0, 0.25);
+  transition: all 0.5s ease-in-out;
 }
 .card-button__value:hover {
-  transform: scale(1.03);
-  transition-duration: 0.5s;
-  cursor: pointer;
   background-image: linear-gradient(to right bottom, #9356DC, #FF79DA);
+  cursor: pointer;
+  opacity: 0.85;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
 }
 
 .card-restaurant__heart::before {
@@ -519,6 +526,7 @@ body {
   font: var(--fa-font-solid);
   font-weight: 400;
   opacity: 1;
+  transition: all 0.5s ease-in-out;
 }
 .card-restaurant__heart::after {
   position: absolute;
@@ -527,6 +535,7 @@ body {
   font: var(--fa-font-solid);
   font-weight: 400;
   opacity: 1;
+  transition: all 0.5s ease-in-out;
   background: linear-gradient(to left top, #9356DC, #FF79DA);
   color: transparent;
   background-clip: text;

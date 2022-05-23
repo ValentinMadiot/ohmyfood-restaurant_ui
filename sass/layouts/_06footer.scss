@@ -1,24 +1,24 @@
 //! FOOTER
 .footer {
-    background-color: #353535;
+    background-color: $color-gray3;
     padding: 2.5rem 3rem;
     color: white;
     font-weight: 500;
 
     // H2
     &__title {
-        font-family: 'Shrikhand', cursive;
+        @include police-shrikhand;
         font-weight: 500;
         font-size: 2rem;
 
         &:hover {
-            color: lighten($color: $color-primary, $amount: 10);
+            @include light-purple;
         }
     }
 
     // UL
     &__list {
-        padding: 1rem 0 0 0;
+        padding-top: 1rem;
     }
     
     // LI
@@ -26,7 +26,7 @@
         padding: .5rem 0;
 
         &:hover {
-            color: lighten($color: $color-primary, $amount: 10);
+            @include light-purple;
         }
 
         &--ico {
