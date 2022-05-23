@@ -82,14 +82,65 @@
     overflow: hidden;
 
     //! ANIMATION MENU
-    &--anim-menu {
+    // &--anim {
+    //     animation: menu 1.5s;
+    //     animation-fill-mode: both;
+    //     @for $i from 1 through 4 {
+    //         &:nth-child(#{$i}) {
+    //             animation-delay: 300ms * $i;
+    //         }
+    //     }
+    // }
+
+    &--anim1 {
         animation: menu 1.5s;
         animation-fill-mode: both;
-        @for $i from 1 through 4 {
-            &:nth-child(#{$i}) {
-                animation-delay: 300ms * $i;
-            }
-        }
+        animation-delay: 300ms;
+    }
+    &--anim2 {
+        animation: menu 1.5s;
+        animation-fill-mode: both;
+        animation-delay: 600ms;
+    }
+    &--anim3 {
+        animation: menu 1.5s;
+        animation-fill-mode: both;
+        animation-delay: 900ms;
+    }
+    &--anim4 {
+        animation: menu 1.5s;
+        animation-fill-mode: both;
+        animation-delay: 1200ms;
+    }
+    &--anim5 {
+        animation: menu 1.5s;
+        animation-fill-mode: both;
+        animation-delay: 1500ms;
+    }
+    &--anim6 {
+        animation: menu 1.5s;
+        animation-fill-mode: both;
+        animation-delay: 1800ms;
+    }
+    &--anim7 {
+        animation: menu 1.5s;
+        animation-fill-mode: both;
+        animation-delay: 2100ms;
+    }
+    &--anim8 {
+        animation: menu 1.5s;
+        animation-fill-mode: both;
+        animation-delay: 2400ms;
+    }
+    &--anim9 {
+        animation: menu 1.5s;
+        animation-fill-mode: both;
+        animation-delay: 2700ms;
+    }
+    &--anim10 {
+        animation: menu 1.5s;
+        animation-fill-mode: both;
+        animation-delay: 3000ms;
     }
 
     //! BUTTON CHECK

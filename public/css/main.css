@@ -428,21 +428,55 @@ body {
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
-.card-menu--anim-menu {
+.card-menu--anim1 {
   animation: menu 1.5s;
   animation-fill-mode: both;
-}
-.card-menu--anim-menu:nth-child(1) {
   animation-delay: 300ms;
 }
-.card-menu--anim-menu:nth-child(2) {
+.card-menu--anim2 {
+  animation: menu 1.5s;
+  animation-fill-mode: both;
   animation-delay: 600ms;
 }
-.card-menu--anim-menu:nth-child(3) {
+.card-menu--anim3 {
+  animation: menu 1.5s;
+  animation-fill-mode: both;
   animation-delay: 900ms;
 }
-.card-menu--anim-menu:nth-child(4) {
+.card-menu--anim4 {
+  animation: menu 1.5s;
+  animation-fill-mode: both;
   animation-delay: 1200ms;
+}
+.card-menu--anim5 {
+  animation: menu 1.5s;
+  animation-fill-mode: both;
+  animation-delay: 1500ms;
+}
+.card-menu--anim6 {
+  animation: menu 1.5s;
+  animation-fill-mode: both;
+  animation-delay: 1800ms;
+}
+.card-menu--anim7 {
+  animation: menu 1.5s;
+  animation-fill-mode: both;
+  animation-delay: 2100ms;
+}
+.card-menu--anim8 {
+  animation: menu 1.5s;
+  animation-fill-mode: both;
+  animation-delay: 2400ms;
+}
+.card-menu--anim9 {
+  animation: menu 1.5s;
+  animation-fill-mode: both;
+  animation-delay: 2700ms;
+}
+.card-menu--anim10 {
+  animation: menu 1.5s;
+  animation-fill-mode: both;
+  animation-delay: 3000ms;
 }
 .card-menu:hover .card-menu__check {
   margin-right: 0;
