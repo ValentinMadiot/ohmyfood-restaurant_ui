@@ -239,6 +239,11 @@
         font-weight: 900;
     }
 
+    // HOVER HEART EMPTY
+    &:hover::before {
+        opacity: 0;
+    } 
+
     // HOVER HEART FULL
     &:hover::after {
         opacity: 1;
@@ -250,6 +255,10 @@
 //! HEART INPUT
 .heart {
     display: none;
+}
+
+.heart:checked + label::before {
+    opacity: 0;
 }
 
 .heart:checked + label::after {

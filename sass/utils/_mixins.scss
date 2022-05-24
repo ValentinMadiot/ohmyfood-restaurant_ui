@@ -52,6 +52,8 @@
 }
 
 //! Gradient
+
+// Heart
 @mixin heart-gradient {
   background: linear-gradient(to left top,$color-primary,$color-secondary);
   color: transparent;
@@ -59,7 +61,7 @@
   -webkit-background-clip: text; 
 }
 
-//! Button 
+// Button 
 @mixin btn-grad {
   font-weight: 500;
   background-image: linear-gradient(to left top,$color-primary,$color-secondary);
@@ -81,7 +83,7 @@
 @mixin heart-restaurant {
   position: absolute;
   right: 3rem;
-  bottom: 4rem;
+  bottom: 14%;
   transform: translateY(50%);
   content: "\f004";
   font: var(--fa-font-solid);
