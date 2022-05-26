@@ -95,6 +95,7 @@
 @mixin heart-menu {
   position: absolute;
   right: 1rem;
+  top: 2.2rem;
   content: "\f004";
   font: var(--fa-font-solid);
   font-weight: 400;

@@ -113,8 +113,7 @@ body {
   position: absolute;
   width: 2rem;
   height: 2rem;
-  top: 50%;
-  transform: translateY(-50%);
+  top: calc(50% - 1.2rem);
   font-size: 2.3rem;
 }
 .header:hover .header--arrow {
@@ -188,6 +187,8 @@ body {
 
 .steps__element {
   position: relative;
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 1.7rem;
   background-color: #f3f3f3;
@@ -198,7 +199,7 @@ body {
 }
 .steps__element::before {
   position: absolute;
-  bottom: 2.4rem;
+  top: calc(50% - 1.1rem);
   left: -1.2rem;
   width: 2.2rem;
   height: 2.2rem;
@@ -562,6 +563,7 @@ body {
 .card-restaurant__heart::before {
   position: absolute;
   right: 1rem;
+  top: 2.2rem;
   content: "\f004";
   font: var(--fa-font-solid);
   font-weight: 400;
@@ -571,6 +573,7 @@ body {
 .card-restaurant__heart::after {
   position: absolute;
   right: 1rem;
+  top: 2.2rem;
   content: "\f004";
   font: var(--fa-font-solid);
   font-weight: 400;

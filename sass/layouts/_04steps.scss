@@ -23,6 +23,8 @@
 // LI
 .steps__element { 
     position: relative;
+    display: flex;
+    align-items: center;
     font-weight: 500;
     font-size: 1.7rem;
     background-color: $color-gray2;
@@ -34,7 +36,7 @@
     // NUMBERS
     &::before {
         position: absolute;
-        bottom: 2.4rem;
+        top: calc(50% - 1.1rem);        
         left: -1.2rem;
         width: 2.2rem;
         height: 2.2rem;
