@@ -1,8 +1,9 @@
 //! IMPORT SCSS
+// UTILS
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./utils/animations";
-@import "./base";
+@import "./utils/base";
 
 // MAIN PAGE (00)
 @import "./layouts/00loader";
@@ -13,8 +14,8 @@
 @import "./layouts/05restaurants";
 @import "./layouts/06footer";
 
-// MENUS (10)
-@import "./layouts/10card"
+// MENUS PAGE (10)
+@import "./pages/10card"
 
 
 

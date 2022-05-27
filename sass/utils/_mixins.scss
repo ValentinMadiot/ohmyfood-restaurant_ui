@@ -48,11 +48,10 @@
 
 //! Transition
 @mixin transition {
-  transition: all .5s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 //! Gradient
-
 // Heart
 @mixin heart-gradient {
   background: linear-gradient(to left top,$color-primary,$color-secondary);
