@@ -492,6 +492,13 @@ body {
   transform: rotate(0deg);
   transition: 0.5s;
 }
+.card-menu:active .card-menu__check {
+  margin-right: 0;
+}
+.card-menu:active .fa-circle-check {
+  transform: rotate(0deg);
+  transition: 0.5s;
+}
 .card-menu .fa-circle-check {
   transform: rotate(360deg);
 }

@@ -80,7 +80,7 @@
     position: relative;
     @include menu-shad;
     overflow: hidden;
-
+    
     //! ANIMATION MENU
     @for $i from 1 through 10 {
         &--anim#{$i} {
@@ -89,8 +89,8 @@
             animation-delay: 300ms * $i;
         }
     }
-
-    //! BUTTON CHECK
+    
+    //! BUTTON CHECK DESKTOP
     &:hover .card-menu__check{
         margin-right: 0;
     }
@@ -98,6 +98,16 @@
         transform: rotate(0deg);
         transition: .5s;  
     }
+
+    //! BUTTON CHECK MOBILE
+    &:active .card-menu__check{
+        margin-right: 0;
+    }
+    &:active .fa-circle-check {
+        transform: rotate(0deg);
+        transition: .5s;  
+    }
+    
     .fa-circle-check {
         transform: rotate(360deg);
     }
