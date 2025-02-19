@@ -11,7 +11,7 @@
 ## <br /> 📌 Sommaire
 
 &nbsp;&nbsp;&nbsp; 🎨 &nbsp; [**Introduction**](#introduction)<br />
-&nbsp;&nbsp;&nbsp; 🛠️ &nbsp; [**Technologies**](#️technologies)<br />
+&nbsp;&nbsp;&nbsp; 🛠️ &nbsp; [**Technologies**](#technologies)<br />
 &nbsp;&nbsp;&nbsp; 🚀 &nbsp; [**Installation**](#installation)<br />
 
 ## <br /> <a name="introduction">🎨 Introduction</a>
