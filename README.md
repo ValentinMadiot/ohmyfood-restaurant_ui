@@ -18,7 +18,7 @@
 
 Ce projet consiste en la création d'un site web présentant quatre restaurants gastronomiques, avec une esthétique moderne et minimaliste. Il comprend une page d'accueil répertoriant les restaurants ainsi qu'une page dédiée à chacun d'eux, affichant leur menu. Réalisé exclusivement en HTML et CSS, il est enrichi d'animations fluides pour offrir une expérience utilisateur élégante et immersive.
 
-Pour plus d'informations, consultez le [dossier](/docs/).
+Pour plus d'informations, consultez le [dossier](/.docs/).
 
 ## <br /> <a name="technologies">🛠️ Technologies</a>
 
