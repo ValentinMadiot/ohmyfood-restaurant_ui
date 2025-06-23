@@ -51,7 +51,8 @@ L’interface est conçue avec **HTML5**, **CSS3** et **Sass**, sans JavaScript,
 ### 📥 Cloner le projet
 
 ```bash
-git clone git@github.com:ValentinMadiot/ohmyfood-restaurant_ui.git
+git clone git@github.com:ValentinMadiot/ohmyfood-restaurant_ui
+cd ohmyfood-restaurant_ui
 ```
 
 ### ▶️ Lancer le projet
