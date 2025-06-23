@@ -16,14 +16,17 @@
 
 ## <br /> <a name="introduction">🎨 Introduction</a>
 
-Ce projet consiste en la création d'un site web présentant quatre restaurants gastronomiques, avec une esthétique moderne et minimaliste. Il comprend une page d'accueil répertoriant les restaurants ainsi qu'une page dédiée à chacun d'eux, affichant leur menu. Réalisé exclusivement en HTML et CSS, il est enrichi d'animations fluides pour offrir une expérience utilisateur élégante et immersive.
+Ce projet présente un site vitrine pour quatre restaurants gastronomiques fictifs. Il propose une page d’accueil listant les établissements et une page individuelle par restaurant avec un menu animé.
 
-Pour plus d'informations, consultez le [dossier](/.docs/).
+L’interface est conçue avec **HTML5**, **CSS3**, et **Sass**, sans JavaScript, pour une expérience fluide et responsive, avec animations modernes et transitions élégantes.
+
+> 📁 Pour plus d’informations, consulte le [dossier](/.docs/).
 
 ## <br /> <a name="technologies">🛠️ Technologies</a>
 
 ### ✅ **Autorisé :**
 
+- HTML5 sémantique
 - CSS (Flexbox, Grid, Animations, Media Queries)
 - Sass (Mixins, Variables, Keyframes)
 - PostCSS Autoprefixer
@@ -31,16 +34,19 @@ Pour plus d'informations, consultez le [dossier](/.docs/).
 ### ❌ **Interdit :**
 
 - JavaScript
-- CSS Frameworks (Bootstrap, Tailwind)
-- Attribut style dans HTML
+- Frameworks CSS (Bootstrap, Tailwind, etc)
+- Attribut `style` dans HTML
 
 ## <br /> <a name="installation">🚀 Installation</a>
 
 ### ✅ Pré-requis
 
-🛠️ [**Git**](https://git-scm.com/) &nbsp;&nbsp;
-🔧 [**Node.js**](https://nodejs.org/fr) &nbsp;&nbsp;
-📦 [**npm**](https://www.npmjs.com/)
+- [Git](https://git-scm.com/) &nbsp;—&nbsp; Système de gestion de versions
+- [Node.js](https://nodejs.org/fr) &nbsp;—&nbsp; Exécuteur local de scripts JavaScript
+- [npm](https://www.npmjs.com/) &nbsp;—&nbsp; Gestionnaire de paquets JavaScript
+- [Google Chrome](https://www.google.com/) &nbsp;—&nbsp; Navigateur moderne
+- [Visual Studio Code](https://code.visualstudio.com/) &nbsp;—&nbsp; Éditeur de code
+- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) &nbsp;—&nbsp; Extension VS Code
 
 ### 📥 Cloner le projet
 
@@ -50,4 +56,4 @@ git clone git@github.com:ValentinMadiot/ohmyfood-restaurant_ui.git
 
 ### ▶️ Lancer le projet
 
-Utilisez Live Server pour un rechargement en temps réel.
+Il suffit d’ouvrir le fichier `index.html` dans un navigateur, ou d’utiliser l’extension **Live Server** sur VS Code pour un aperçu dynamique.
