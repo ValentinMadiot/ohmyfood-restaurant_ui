@@ -35,7 +35,7 @@ L’interface est conçue avec **HTML5**, **CSS3**, et **Sass**, sans JavaScript
 
 - JavaScript
 - Frameworks CSS (Bootstrap, Tailwind, etc)
-- Attribut `style` dans HTML
+- Style inline dans les balises HTML
 
 ## <br /> <a name="installation">🚀 Installation</a>
 
