@@ -18,7 +18,7 @@
 
 Ce projet présente un site vitrine pour quatre restaurants gastronomiques fictifs. Il propose une page d’accueil listant les établissements et une page individuelle par restaurant avec un menu animé.
 
-L’interface est conçue avec **HTML5**, **CSS3**, et **Sass**, sans JavaScript, pour une expérience fluide et responsive, avec animations modernes et transitions élégantes.
+L’interface est conçue avec **HTML5**, **CSS3** et **Sass**, sans JavaScript, pour une expérience fluide et responsive, avec animations modernes et transitions élégantes.
 
 > 📁 Pour plus d’informations, consulte le [dossier](/.docs/).
 
@@ -39,7 +39,7 @@ L’interface est conçue avec **HTML5**, **CSS3**, et **Sass**, sans JavaScript
 
 ## <br /> <a name="installation">🚀 Installation</a>
 
-### ✅ Pré-requis
+### ✅ Prérequis
 
 - [Git](https://git-scm.com/) &nbsp;—&nbsp; Système de gestion de versions
 - [Node.js](https://nodejs.org/fr) &nbsp;—&nbsp; Exécuteur local de scripts JavaScript
